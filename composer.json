@@ -1,0 +1,15 @@
+{
+    "name": "jamile/testesapostas",
+    "require": {},
+    "description": "trabalho unifacs",
+
+    "autoload": {
+        "psr-4": {
+            "Jamile\\TestesApostas\\": "src/",
+            "Jamile\\Test\\": "test/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
