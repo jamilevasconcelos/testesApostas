@@ -1,6 +1,6 @@
 <?php
-use Jamile\Apostas\Model\Leilao;
-use Jamile\Apostas\Model\Lance;
-use Jamile\Apostas\Avaliador;
+use Jamile\TestesApostas\Model\Leilao;
+use Jamile\TestesApostas\Model\Lance;
+use Jamile\TestesApostas\Avaliador;
 
 require 'vendor/autoload.php';
