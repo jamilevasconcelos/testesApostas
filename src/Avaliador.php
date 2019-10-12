@@ -59,4 +59,10 @@ class Avaliador{
             return $menorlance;
         }
         
+         // Ordena lista de lances de forma decrescente e retorna menor lance
+         function buscaMenorLanceDecrescente ($listaDeLances){
+            usort($listaDeLances, array($this, 'comparaLancesDecrescente')); 
+            $menorlance = $this->buscaMenorLance($listaDeLances);
+            return $menorlance;
+        }       
 }
