@@ -44,6 +44,13 @@ class Avaliador{
             $maiorlance = $this->buscaMaiorLance($listaDeLances);
             return $maiorlance;
         }
-        
+
+        // Ordena lista de lances de forma decrescente e retorna maior lance
+        function buscaMaiorLanceDecrescente ($listaDeLances){
+            usort($listaDeLances, array($this, 'comparaLancesDecrescente'));  
+            $maiorlance = $this->buscaMaiorLance($listaDeLances);
+            return $maiorlance;
+        }
+
         
 }
