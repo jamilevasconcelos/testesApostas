@@ -5,11 +5,16 @@ namespace Jamile\TestesApostas;
 class Avaliador{
 
 
-        // Função auxiliar
-        // Compara valores de lances para ordenar listas (crescente)
+        // Funções auxiliares
+        // Compara valores de lances para ordenar listas (crescente | decrescente)
         function comparaLancesCrescente($lance1, $lance2) { 
             return $lance1->getValor() > $lance2->getValor(); 
         }
+
+        function comparaLancesDecrescente($lance1, $lance2) { 
+            return $lance2->getValor() > $lance1->getValor(); 
+        }
+
 
         // Busca maior lance
         function buscaMaiorLance ($listaDeLances){  
@@ -21,6 +26,17 @@ class Avaliador{
             }
             return $maiorlance;
         }
+
+        // Busca menor lance
+        function buscaMenorLance ($listaDeLances){  
+            $menorlance = 100000000;
+
+            foreach ($listaDeLances as $lance) {
+                if ($lance->getValor() < $menorlance) 
+                    $menorlance = $lance->getValor();            
+            }
+            return $menorlance;
+        }
         
         // Ordena lista de lances de forma crescente e retorna maior lance
         function buscaMaiorLanceCrescente ($listaDeLances){      
@@ -28,5 +44,6 @@ class Avaliador{
             $maiorlance = $this->buscaMaiorLance($listaDeLances);
             return $maiorlance;
         }
-
+        
+        
 }

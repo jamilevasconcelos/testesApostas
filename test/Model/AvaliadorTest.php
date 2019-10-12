@@ -66,4 +66,5 @@ class AvaliadorTest extends TestCase {
         $this->assertEquals($this->lances[2]->getValor(), $this->avaliador->buscaMaiorLanceCrescente($this->lances));
     }
 
+
 }
