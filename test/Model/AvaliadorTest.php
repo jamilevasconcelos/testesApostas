@@ -71,4 +71,9 @@ class AvaliadorTest extends TestCase {
         $this->assertEquals($this->lances[2]->getValor(), $this->avaliador->buscaMaiorLanceDecrescente($this->lances));
     }
 
+    /* Busca menor lance lista de ordem crescente */
+    function testBuscaMenorLanceCrescente() {
+        $this->assertEquals($this->lances[1]->getValor(), $this->avaliador->buscaMenorLanceCrescente($this->lances));
+    }
+
 }
