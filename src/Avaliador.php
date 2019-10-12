@@ -11,17 +11,22 @@ class Avaliador{
             return $lance1->getValor() > $lance2->getValor(); 
         }
 
-        // Ordena lista de lances de forma crescente e retorna maior lance
-        function buscaMaiorLanceCrescente ($listaDeLances){      
+        // Busca maior lance
+        function buscaMaiorLance ($listaDeLances){  
             $maiorlance = -1;
-            
-            usort($listaDeLances, array($this, 'comparaLancesCrescente')); //ordena lista
+
             foreach ($listaDeLances as $lance) {
                 if ($lance->getValor() > $maiorlance) 
                     $maiorlance = $lance->getValor();            
             }
             return $maiorlance;
         }
-
+        
+        // Ordena lista de lances de forma crescente e retorna maior lance
+        function buscaMaiorLanceCrescente ($listaDeLances){      
+            usort($listaDeLances, array($this, 'comparaLancesCrescente')); //ordena lista
+            $maiorlance = $this->buscaMaiorLance($listaDeLances);
+            return $maiorlance;
+        }
 
 }
