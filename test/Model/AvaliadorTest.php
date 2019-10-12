@@ -80,5 +80,13 @@ class AvaliadorTest extends TestCase {
     function testBuscaMenorLanceDecrescente() {
         $this->assertEquals($this->lances[1]->getValor(), $this->avaliador->buscaMenorLanceDecrescente($this->lances));
     }
+    
+    /* Busca os três maiores valores */
+    function testBuscaTresMaioresValores() {
+        $tresmaioresvalores = array ($this->lances[2]->getValor(),
+                                     $this->lances[3]->getValor(),
+                                     $this->lances[0]->getValor());
+        $this->assertEquals($tresmaioresvalores, $this->avaliador->buscaTresMaioresValores($this->lances));
+    }    
 
 }

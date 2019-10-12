@@ -58,11 +58,21 @@ class Avaliador{
             $menorlance = $this->buscaMenorLance($listaDeLances);
             return $menorlance;
         }
-        
+
          // Ordena lista de lances de forma decrescente e retorna menor lance
          function buscaMenorLanceDecrescente ($listaDeLances){
             usort($listaDeLances, array($this, 'comparaLancesDecrescente')); 
             $menorlance = $this->buscaMenorLance($listaDeLances);
             return $menorlance;
         }       
+
+        // Ordena lista de lances e retorna os três maiores valores
+        function buscaTresMaioresValores ($listaDeLances){
+            usort($listaDeLances, array($this, 'comparaLancesDecrescente')); //ordena decrescente
+            $listaDeLances = array_slice($listaDeLances, 0, 3); //pega itens com os 3 maiores valores
+            $listaDeLances = array ($listaDeLances[0]->getValor(), $listaDeLances[1]->getValor(),
+                                        $listaDeLances[2]->getValor());
+            return $listaDeLances;
+        }
+        
 }
