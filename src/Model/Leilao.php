@@ -1,7 +1,6 @@
 <?php
 namespace Jamile\TestesApostas\Model;
 
-
 class Leilao {
 
     public $codigo;

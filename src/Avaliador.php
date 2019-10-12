@@ -4,5 +4,4 @@ namespace Jamile\TestesApostas;
 
 class Avaliador{
 
-
 }
